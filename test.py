@@ -1,10 +1,4 @@
-# Motif-Scanner
-A Python library and program for scanning matches of a sequence motif.
-
-## Usage
-```python
 from motif_scanner import MotifScanner
-
 
 scanner = MotifScanner("GAACGTCCCTGCCGTATTATTGTTTTTATAGG")
 # background distribution
@@ -22,7 +16,5 @@ psdm = [
     {'A': 0.7, 'C': 0.1, 'G': 0.1, 'T': 0.1}
 ]
 for p_value, position, piece in scanner.scan(p_value=0.05, background=background, psdm=psdm):
-    # do something with p_value, position, piece, e.g.
-    # print(p_value, position, piece)
-    pass
-```
+    # do something with p_value, position, piece, for example:
+    print(p_value, position, piece)
